@@ -28,4 +28,4 @@ How to generate the APK:
 
 4. That’s it. Rename this file and share!
 
-The deadline for the assignment is **Sunday, May 14, 2023, end of the day.**
+Please include your project source code and APK in this repo. The deadline for the assignment is **Sunday, May 14, 2023, end of the day.**
