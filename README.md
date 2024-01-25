@@ -1,3 +1,36 @@
+
+# Valentina App
+
+Welcome to Valentina App! This Flutter application allows users to browse and purchase gifts and plants.
+
+How to Run the App
+To run the app, follow these steps:
+
+- Run the following command in your terminal to retrieve dependencies:
+1. flutter pub get
+- Once the dependencies are fetched, run the app using:
+2. flutter run
+
+### APIs Used
+The following APIs are utilized in this application:
+
+Gifts API: Fake Store API
+Plants API: Mocki
+
+### Screens
+The app consists of the following screens:
+
+- Gifts Screen: Displays a list of available gifts fetched from the Fake Store API.
+- Plants Screen: Displays a list of available plants fetched from the Mocki API.
+- Checkout Screen: Allows users to proceed with their purchases.
+- Purchases Screen: Allows users to pay their purchases.
+- Confirmation Screen: Shows Users receipt.
+
+
+
+
+
+
 # Application Development 2 - Assignment
 
 This template repository is the starter project for App. Dev. 2 assignment. Written in Flutter/Dart.
