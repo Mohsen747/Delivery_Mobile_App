@@ -7,8 +7,16 @@ import '../Class/CartManager.dart';
 
 class ReceiptScreen extends StatelessWidget {
   final double totalPrice;
+  final String firstName;
+  final String lastName;
+  final String address;
 
-  const ReceiptScreen({super.key, required this.totalPrice});
+    const ReceiptScreen({super.key, 
+    required this.totalPrice,
+    required this.firstName,
+    required this.lastName,
+    required this.address
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +38,21 @@ class ReceiptScreen extends StatelessWidget {
                   fontSize: 20,
                 ),
                 textAlign: TextAlign.center,
+              ),
+              const Divider(),
+              Text(
+                'Customer: $firstName $lastName',
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'RobotoMono',
+                ),
+              ),
+              Text(
+                'Address: $address',
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'RobotoMono',
+                ),
               ),
               const Divider(),
               Text(

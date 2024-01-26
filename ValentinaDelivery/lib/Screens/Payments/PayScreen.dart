@@ -6,15 +6,17 @@ import 'ReceiptScreen.dart';
 class PayScreen extends StatefulWidget {
   final double totalPrice;
 
-  const PayScreen({super.key, required this.totalPrice});
+  PayScreen({required this.totalPrice});
 
   @override
-  // ignore: library_private_types_in_public_api
   _PayScreenState createState() => _PayScreenState();
 }
 
 class _PayScreenState extends State<PayScreen> {
   final TextEditingController _monthYearController = TextEditingController();
+  final TextEditingController _firstnameController = TextEditingController();
+  final TextEditingController _lastnameController = TextEditingController();
+  final TextEditingController _addressController = TextEditingController();
 
   @override
   void initState() {
@@ -46,6 +48,55 @@ class _PayScreenState extends State<PayScreen> {
           child: Column(
             children: [
               TextFormField(
+                controller: _firstnameController,
+                decoration: const InputDecoration(
+                  labelText: 'Firstname',
+                  hintText: 'Alex',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                controller: _lastnameController,
+                decoration: const InputDecoration(
+                  labelText: 'Lastname',
+                  hintText: 'Jolig',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                controller: _addressController,
+                decoration: const InputDecoration(
+                  labelText: 'Address',
+                  hintText: '123 Main St, City, Country',
+                  border: OutlineInputBorder(),
+                ),
+                minLines: 4,
+                maxLines: 7,
+              ),
+              const SizedBox(height: 20),
+              const Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Divider(
+                      color: Colors.grey,
+                      height: 36,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    child: Text('Payment Info'),
+                  ),
+                  Expanded(
+                    child: Divider(
+                      color: Colors.grey,
+                      height: 36,
+                    ),
+                  ),
+                ],
+              ),
+              TextFormField(
                 decoration: const InputDecoration(
                   labelText: 'Credit Card Number',
                   hintText: '1234 5678 9012 3456',
@@ -69,7 +120,6 @@ class _PayScreenState extends State<PayScreen> {
                       keyboardType: TextInputType.number,
                     ),
                   ),
-                  
                   const SizedBox(width: 20),
                   Expanded(
                     child: TextFormField(
@@ -87,9 +137,8 @@ class _PayScreenState extends State<PayScreen> {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // Implement payment processing logic here
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => ReceiptScreen(totalPrice: widget.totalPrice)),
+                    MaterialPageRoute(builder: (context) => ReceiptScreen(totalPrice: widget.totalPrice, firstName: _firstnameController.text,lastName: _lastnameController.text, address: _addressController.text,)),
                   );
                 },
                 style: ElevatedButton.styleFrom(
