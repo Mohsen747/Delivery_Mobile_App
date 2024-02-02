@@ -40,4 +40,6 @@ Flutter
 Dart 
 Android Studio
 
+The screenshot folder is available in repository.
+
 
