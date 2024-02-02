@@ -21,6 +21,8 @@ The app consists of the following screens:
 
 ## How to run the App
 On your local machine:
+clone the link:
+https://github.com/Mohsen747/Delivery_Mobile_App.git
 
 Run the following command in your terminal to retrieve dependencies:
 
