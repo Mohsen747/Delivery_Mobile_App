@@ -23,9 +23,11 @@ The app consists of the following screens:
 On your local machine:
 
 Run the following command in your terminal to retrieve dependencies:
+
 flutter pub get
 
 Once the dependencies are fetched, run the app using:
+
 flutter run
   
 
