@@ -37,6 +37,7 @@ flutter run
 The following APIs are utilized in this application:
 
 Gifts API: Fake Store API
+
 Plants API: Mocki
 
 ### Tech Stack
