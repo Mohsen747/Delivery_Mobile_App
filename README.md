@@ -40,11 +40,13 @@ Gifts API: Fake Store API
 
 Plants API: Mocki
 
-### Tech Stack
+### Tech Used
 Flutter
-Dart 
+
+Dart
+
 Android Studio
 
-The screenshot folder is available in repository.
+The screenshot folder is available in the repository.
 
 
